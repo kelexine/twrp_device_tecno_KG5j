@@ -14,15 +14,15 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/kelexine/twrp_device_cubot_p50'
+        default: 'https://github.com/kelexine/twrp_device_tecno_kg5j'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'android-11'
+        default: 'main'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/cubot/P50'
+        default: 'device/tecno/KG5j'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
@@ -30,11 +30,11 @@ on:
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'twrp_P50'
+        default: 'twrp_KG5j'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
-        default: 'recovery'
+        default: 'boot'
 
 jobs:
   build:
@@ -107,7 +107,7 @@ jobs:
     - name: Set Swap Space
       uses: pierotofy/set-swap-space@master
       with:
-        swap-size-gb: 10
+        swap-size-gb: 16
 
     - name: Building recovery
       run: |
